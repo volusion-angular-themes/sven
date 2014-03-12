@@ -1,0 +1,6 @@
+.form-control {
+  @extend %remove-box-shadow;
+}
+.form-control:focus {
+  @extend %remove-box-shadow;
+}

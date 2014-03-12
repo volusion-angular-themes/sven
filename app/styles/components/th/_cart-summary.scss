@@ -1,0 +1,47 @@
+.th-cart-summary {
+  @extend %inline-block;
+  margin: 13px 10px 0;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  @include respond-to(md-and-up) {
+    margin-top: 25px;
+  }
+
+  &__link {
+    @extend %inline-block;
+    position: relative;
+  }
+
+  &__icon {
+    @extend %inline-block;
+  }
+
+  &__count {
+    @extend %inline-block;
+    @extend %rounded--narrow;
+    background-color: map-get($colors, bodyBg);
+    color: map-get($colors, textDark);
+    padding: 4px;
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    text-indent: -9999px;
+    max-height: 5px;
+
+    @include respond-to(md-and-up) {
+      @include border-radius(13px);
+      position: static;
+      text-indent: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      margin-left: 5px;
+      font-size: 1.4rem;
+      font-family: "montserrat-bold";
+      max-height: none;
+    }
+  }
+}
+

@@ -2,10 +2,41 @@
   @include inline-block;
 }
 
+%opacity-100 {
+  @include opacity(1);
+}
+
 %opacity-80 {
   @include opacity(0.8);
+}
+
+%opacity-75 {
+  @include opacity(0.75);
+}
+
+%animate-all-default {
+  @include transition(all, 0.2s, ease-in-out);
 }
 
 %animate-color-default {
   @include transition(color, 0.2s, ease-in-out);
 }
+
+%rounded {
+  &--narrow {
+    @include border-radius(3px);
+  }
+
+  &--wide {
+    @include border-radius(13px);
+  }
+}
+
+%remove-box-shadow {
+  @include box-shadow(none);
+}
+
+.nopadding {
+  padding: 0;
+}
+

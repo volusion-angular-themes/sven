@@ -1,0 +1,9 @@
+.th-page-wrap {
+  background-color: map-get($colors, bodyBg);
+
+  &--product {
+    background-color: map-get($colors, lightestBg);
+  }
+
+}
+

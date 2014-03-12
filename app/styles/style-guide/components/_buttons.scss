@@ -1,0 +1,17 @@
+.btn {
+  font-size: 1.4rem;
+  border-width: 2px;
+
+  &.btn-sm {
+    font-size: 1.2rem;
+  }
+
+  &.btn-xs {
+    font-size: 1rem;
+  }
+
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 1.8rem;
+}

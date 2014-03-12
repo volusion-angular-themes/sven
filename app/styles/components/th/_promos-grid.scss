@@ -1,0 +1,109 @@
+.th-promos-grid {
+  text-align: center;
+
+  &__heading {
+    padding: 12px;
+    text-transform: uppercase;
+
+    span {
+      @extend %inline-block;
+      font-size: 1.4rem;
+      color: map-get($colors, textDark);
+    }
+
+    a {
+      @extend %inline-block;
+      color: map-get($colors, linkColor);
+      margin-left: 15px;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__block {
+    position: relative;
+    height: 160px;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: map-get($colors, textLight);
+    }
+
+    @include respond-to(sm-and-up) {
+      height: 256px;
+    }
+
+    @include respond-to(md-and-up) {
+      height: 300px;
+    }
+
+  }
+
+  &__1 {
+    background-image: image-url("theme/home/promos/p1-bg.jpg");
+  }
+
+  &__2 {
+    background-image: image-url("theme/home/promos/p2-bg.jpg");
+  }
+
+  &__3 {
+    background-image: image-url("theme/home/promos/p3-bg.jpg");
+  }
+
+  &__4 {
+    background-image: image-url("theme/home/promos/p4-bg.jpg");
+  }
+
+  &__5 {
+    background-image: image-url("theme/home/promos/p5-bg.jpg");
+  }
+
+  &__6 {
+    background-image: image-url("theme/home/promos/p6-bg.jpg");
+  }
+
+  &__block {
+    @include backface-visibility(hidden);
+
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    }
+
+    @include background-size(cover);
+
+    &:hover {
+      @extend %opacity-80;
+      @extend %animate-all-default;
+    }
+  }
+
+  &__title {
+    @include translucent-bg(map-get($colors, black), 0.5);
+    padding: 10px 0;
+    font-family: "montserrat-bold";
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    margin-top: -20px; /* Half the height */
+    margin-left: -75px; /* Half the width */
+
+    @include respond-to(sm-and-up) {
+      width: 200px;
+      margin-top: -15px; /* Half the height */
+      margin-left: -100px; /* Half the width */
+      font-size: 1.5rem;
+    }
+
+  }
+
+}
+
+

@@ -1,0 +1,192 @@
+
+$userDefined: (
+  brandPrimary:                       #222,
+  textColor:                          #999,
+  linkColor:                          #999,
+  linkHoverColor:                     #999,
+
+  headingsColor:                      #222,
+
+  btnDefaultColor:                    #232323,
+  btnDefaultBg:                       #fff,
+  btnDefaultBorder:                   #232323,
+  btnPrimaryColor:                    #fff,
+
+  textLight:                          #fff,
+  textDark:                           #222,
+
+  darkBg:                             #333,
+  darkerBg:                           #222,
+  lightBg:                            #999,
+  lightestBg:                         #f8f8f8,
+
+  borderColor:                        #000,
+  lightBorderColor:                   #999,
+
+  white:                              #fff,
+  black:                              #000
+);
+
+
+
+$bootstrap: (
+  grayDarker:                         #222,
+  grayDark:                           #333,
+  gray:                               #555,
+  grayLight:                          #999,
+  grayLighter:                        #eee,
+
+  brandPrimary:                       #222,
+  brandSuccess:                       #7dba7d,
+  brandInfo:                          #82c4d7,
+  brandWarning:                       #e3b676,
+  brandDanger:                        #d9534f,
+
+  bodyBg:                             #fff,
+  textColor:                          #999,
+  linkColor:                          #999,
+  linkHoverColor:                     #999,
+
+  headingsColor:                      #222,
+
+  componentActiveColor:               #fff,
+
+  tableBg:                            transparent,
+  tableBgAccent:                      #f9f9f9,
+  tableBgHover:                       #f5f5f5,
+  tableBorderColor:                   #ddd,
+
+  btnDefaultColor:                    #232323,
+  btnDefaultBg:                       #fff,
+  btnDefaultBorder:                   #232323,
+  btnPrimaryColor:                    #fff,
+  btnSuccessColor:                    #fff,
+  btnInfoColor:                       #fff,
+  btnWarningColor:                    #fff,
+  btnDangerColor:                     #fff,
+
+  inputBg:                            #fff,
+  inputBorder:                        #000,
+  inputFocus:                         #000,
+
+  legendBorderColor:                  #e5e5e5,
+
+  dropdownBg:                         #363636,
+  dropdownBorder:                     #363636,
+  dropdownFallbackBorder:             #363636,
+  dropdownDividerBg:                  #565656,
+  dropdownLinkColor:                  #fff,
+  dropdownLinkHoverColor:             #eee,
+  dropdownLinkHoverBg:                #363636,
+  dropdownCaretColor:                 #fff,
+
+  navbarDefaultColor:                 #777,
+  navbarDefaultBg:                    #f8f8f8,
+  navbarDefaultLinkColor:             #777,
+  navbarDefaultLinkHoverColor:        #333,
+  navbarDefaultLinkHoverBg:           transparent,
+  navbarDefaultLinkActiveColor:       #555,
+  navbarDefaultLinkDisabledColor:     #ccc,
+  navbarDefaultLinkDisabledBg:        transparent,
+  navbarDefaultBrandHoverBg:          transparent,
+  navbarDefaultToggleHoverBg:         #ddd,
+  navbarDefaultToggleIconBarBg:       #888,
+  navbarDefaultToggleBorderColor:     #ddd,
+  navbarDefaultInverseColor:          #fff,
+
+  navbarInverseBg:                    #232323,
+  navbarInverseBorder:                transparent,
+  navbarInverseLinkColor:             #fff,
+  navbarInverseLinkHoverColor:        #fff,
+  navbarInverseLinkHoverBg:           transparent,
+  navbarInverseLinkActiveBg:          transparent,
+  navbarInverseLinkDisabledColor:     #444,
+  navbarInverseLinkDisabledBg:        transparent,
+  navbarInverseBrandHoverColor:       #656565,
+  navbarInverseBrandHoverBg:          transparent,
+  navbarInverseToggleHoverBg:         #232323,
+  navbarInverseToggleIconBarBg:       #656565,
+  navbarInverseToggleBorderColor:     #232323,
+
+  navOpenLinkHoverColor:              #fff,
+  navTabsBorderColor:                 #ddd,
+  navTabsActiveLinkHoverBorderColor:  #ddd,
+  navTabsJustifiedLinkBorderColor:    #ddd,
+
+  paginationBg:                       #fff,
+  paginationBorder:                   #e6e6e6,
+  paginationHoverBorder:              #e6e6e6,
+  paginationActiveColor:              #fff,
+  paginationDisabledBg:               #fff,
+  paginationDisabledBorder:           #e6e6e6,
+
+  stateSuccessText:                   #3c763d,
+  stateSuccessBg:                     #dff0d8,
+  stateInfoText:                      #31708f,
+  stateInfoBg:                        #d9edf7,
+  stateWarningText:                   #8a6d3b,
+  stateWarningBg:                     #fcf8e3,
+  stateDangerText:                    #a94442,
+  sateDangerBg:                       #f2dede,
+
+  tooltopColor:                       #fff,
+  tooltipBg:                          #000,
+
+  popoverBg:                          #fff,
+  popoverFallbackBorderColor:         #ccc,
+  popoverArrowColor:                  #fff,
+
+  labelColor:                         #fff,
+  labelLinkHoverColor:                #fff,
+
+  modalContentBg:                     #fff,
+  modalContentFallbackColor:          #999,
+  modalBackdropBg:                    #000,
+  modalFooterBorderColor:             #e5e5e5,
+
+  progressBg:                         #f5f5f5,
+  progressBarColor:                   #fff,
+
+  listGroupBg:                        #fff,
+  listGroupBorder:                    #ddd,
+  listGroupHoverBg:                   #f5f5f5,
+  listGroupLinkColor:                 #555,
+  listGroupLinkHeadingColor:          #333,
+
+  panelBg:                            #fff,
+  panelInnerBorder:                   #ddd,
+  panelFooterBg:                      #f5f5f5,
+  panelDefaultBorder:                 #ddd,
+  panelDefaultHeadingBg:              #f5f5f5,
+  panelPrimaryText:                   #fff,
+
+  thumbnailBorder:                    #ddd,
+
+  wellBg:                             #f5f5f5,
+
+  badgeColor:                         #fff,
+  badgeLinkHoverColor:                #fff,
+  badgeActiveBg:                      #fff,
+
+  breadcrumbBg:                       transparent,
+  breadcrumbColor:                    #ccc,
+  breadActiveColor:                   #222,
+
+  carouselControlColor:               #fff,
+  carouselIndicatorActiveBg:          #fff,
+  carouselIndicatorBorderColor:       #fff,
+  carouselCaptionColor:               #fff,
+
+  closeColor:                         #000,
+  closeTextShadow:                    #fff,
+
+  codeColor:                          #c7254e,
+  codeBg:                             #f9f2f4,
+  kbdColor:                           #fff,
+  kbdBg:                              #333,
+  preBg:                              #f5f5f5,
+  preBorderColor:                     #ccc
+);
+
+$colors: map-merge($bootstrap, $userDefined);
+

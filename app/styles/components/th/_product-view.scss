@@ -1,0 +1,34 @@
+.th-product-view {
+  padding-top: 20px;
+
+  &__image {
+    text-align: center;
+
+    img {
+      @extend %inline-block;
+    }
+  }
+
+  &__alts {
+    padding: 15px 0;
+
+    &__item {
+      @extend %inline-block;
+      border: 2px solid map-get($colors, lightBorderColor);
+      margin: 8px;
+
+      &:hover {
+        border-color: map-get($colors, textDark);
+      }
+    }
+
+  }
+
+}
+
+.th-product-view--tall {
+  &__alts {
+    text-align: center;
+    padding-top: 47px;
+  }
+}

@@ -1,0 +1,68 @@
+.th-search {
+  @extend %inline-block;
+  max-width: 300px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.th-search__input {
+  background-color: map-get($colors, lightBg);
+  border: 0;
+  color: map-get($colors, textDark);
+  padding-left: 0;
+  font-size: 1.4rem;
+  height: 40px;
+
+  @include input-placeholder {
+    color: map-get($colors, textDark);
+  }
+
+}
+
+.th-search__submit {
+  border: 0;
+  height: 40px;
+  background-color: map-get($colors, lightBg);
+
+  span {
+    @extend %inline-block;
+  }
+}
+
+.th-search--collapsed {
+  @extend %inline-block;
+  height: 24px;
+  margin: 12px 10px 0;
+
+  form {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+}
+
+.th-search--collapsed__input {
+  @extend %inline-block;
+  background: none;
+  border: 0;
+}
+
+.th-search--collapsed__submit {
+  @extend %inline-block;
+  outline: none;
+  padding: 0;
+  background-color: map-get($colors, darkerBg);
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+
+  span {
+    @extend %inline-block;
+  }
+
+}

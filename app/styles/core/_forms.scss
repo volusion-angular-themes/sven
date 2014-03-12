@@ -1,1 +1,7 @@
 @import "bootstrap/forms";
+
+select {
+  @include border-radius(0);
+  border: 2px solid map-get($colors, borderColor);
+  background: map-get($colors, inputBg);
+}

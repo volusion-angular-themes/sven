@@ -1,1 +1,11 @@
 @import "bootstrap/scaffolding";
+
+body {
+  @include font-smoothing;
+  font-size: 1.2rem;
+  padding-top: 50px;
+
+  @include respond-to(md-and-up) {
+    padding-top: 130px;
+  }
+}

@@ -1,0 +1,44 @@
+.th-products-grid {
+  padding: 10px 5px;
+
+  &__heading {
+    margin: 15px 0 0 -5px;
+
+    @include respond-to(md-and-up) {
+      margin-left: 5px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    .img-responsive {
+      @extend %inline-block;
+    }
+
+    &__image {
+      padding: 10px 0;
+    }
+
+    &__name {
+      font-size: 1.2rem;
+      font-family: "montserrat-bold";
+
+      a {
+        color: map-get($colors, textDark);
+      }
+    }
+
+    &__price {
+      font-size: 1.8rem;
+      color: map-get($colors, textColor);
+    }
+  }
+
+  @include respond-to(md-and-up) {
+    background-color: map-get($colors, bodyBg);
+    padding: 20px 5px;
+  }
+
+
+}

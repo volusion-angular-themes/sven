@@ -1,0 +1,11 @@
+.th-featured-products {
+
+  &__title {
+    background-color: map-get($colors, darkerBg);
+    padding: 8px 10px;
+    color: map-get($colors, white);
+    font-family: "montserrat-bold";
+    text-transform: uppercase;
+  }
+
+}
