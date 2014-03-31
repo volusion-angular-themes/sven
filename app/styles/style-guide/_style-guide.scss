@@ -1,18 +1,5 @@
-@import 'bootstrap/theme';
-
 // Components defining style-guide
 
-body {
-  padding-top: 70px;
-  padding-bottom: 30px;
-}
-
-.theme-dropdown .dropdown-menu {
-  display: block;
-  position: static;
-  margin-bottom: 20px;
-}
-
-.theme-showcase > p > .btn {
-  margin: 5px 0;
-}
+@import 'components/type';
+@import 'components/buttons';
+@import 'components/forms';

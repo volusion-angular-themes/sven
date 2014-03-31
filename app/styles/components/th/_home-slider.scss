@@ -1,0 +1,99 @@
+.th-home-slider {
+  @include respond-to(md-and-up) {
+    margin-top: -130px;
+  }
+}
+
+.th-slide {
+  position: relative;
+  height: 350px;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include respond-to(md-and-up) {
+    height: 850px;
+  }
+
+}
+
+.th-slide__content {
+  position: absolute;
+  text-align: left;
+  width: 180px;
+  top: 24%;
+  left: 5%;
+
+  @include respond-to(sm-and-up) {
+    width: 300px;
+    left: 15%;
+    text-align: center;
+  }
+
+  @include respond-to(md-and-up) {
+    left: 25%;
+    top: 43%;
+  }
+}
+
+.th-slide__title {
+  color: map-get($colors, textLight);
+  display: block;
+  font-family: "montserrat-bold";
+  font-size: 3.0rem;
+  line-height: 2.7rem;
+  text-transform: uppercase;
+
+  @include respond-to(sm-and-up) {
+    font-size: 48px;
+    line-height: 4.3rem;
+  }
+
+  @include respond-to(md-and-up) {
+    font-size: 6.0rem;
+    line-height: 4.9rem;
+  }
+}
+
+.th-slide__subtitle {
+  color: rgba(map-get($colors, white), 0.8);
+  display: block;
+  font-size: 1.2rem;
+  padding: 6px 0;
+
+  @include respond-to(sm-and-up) {
+    font-size: 1.4rem;
+    padding: 10px 0;
+  }
+}
+
+.btn.th-slide__button {
+  text-transform: uppercase;
+  border-color: map-get($colors, white);
+  color: map-get($colors, textLight);
+  font-family: "montserrat-bold";
+  font-size: 1.2rem;
+
+  &:hover {
+    color: map-get($colors, textLight);
+  }
+
+  @include respond-to(sm-and-up) {
+    font-size: 1.4rem;
+  }
+}
+
+.th-slide-1 {
+  background: {
+    image: image-url("theme/home/slider/slide1-lg.jpg");
+    repeat: no-repeat;
+    position: center center;
+  };
+
+  @include background-size(cover);
+}

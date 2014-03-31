@@ -1,0 +1,28 @@
+.th-product-slider {
+  background-color: map-get($colors, lightestBg);
+  padding-top: 10px;
+}
+
+.th-product-slider__product {
+  @extend %inline-block;
+  height: auto;
+  position: relative;
+  max-width: 259px;
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    @include box-shadow(none);
+  }
+}
+
+.th-product-slider__details {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 71%;
+
+  &__name {
+    font-size: 1.4rem;
+  }
+}

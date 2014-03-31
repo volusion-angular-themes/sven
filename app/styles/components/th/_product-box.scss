@@ -1,0 +1,39 @@
+.th-product-box {
+  @extend %inline-block;
+  position: relative;
+  background-color: map-get($colors, lightestBg);
+  width: 100%;
+  height: 240px;
+  text-align: right;
+  padding: 0 12px;
+  margin: 10px 0;
+
+  @include respond-to(md-and-up) {
+    height: 250px;
+
+    &:hover {
+      @include transition(all, 0.2s, ease-in-out);
+      @include box-shadow(rgba(map-get($colors, black), 0.2) 0 0 8px 0);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 12px;
+    bottom: 0;
+  }
+}
+
+.th-product-option--inline {
+  @extend %inline-block;
+  margin-right: 15px;
+}
+
+.th-product-box--large {
+  height: 520px;
+
+  &__image {
+    right: 15px;
+  }
+
+}

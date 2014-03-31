@@ -21,7 +21,12 @@ angular.module('volusionApp', [
     'ui.router',
     'seo',
     'pascalprecht.translate',
-    require('./services/config').name
+    require('./services/config').name,
+    'ui.bootstrap.carousel',
+    'ui.bootstrap.dropdownToggle',
+    'ui.bootstrap.transition',
+    'ui.bootstrap.accordion',
+    'ui.bootstrap.collapse'
   ])
   .provider('api', require('./services/api-provider'));
 
@@ -105,11 +110,22 @@ angular.module('volusionApp')
     $translateProvider.preferredLanguage('en');
     $translateProvider.useLocalStorage();
   })
-  .run(function($templateCache) {
+  .run(function($rootScope, $translate, $templateCache) {
     $templateCache.put('views/home.html', require('./views/home.html'));
     $templateCache.put('views/style-guide.html', require('./views/style-guide.html'));
     $templateCache.put('views/category.html', require('./views/category.html'));
     $templateCache.put('views/product.html', require('./views/product.html'));
+    $rootScope.$on('$locationChangeSuccess', function(ev, next) {
+      function getNavbar() {
+        return angular.element(document.getElementsByClassName('th-navbar')[0]);
+      }
+      var isHome = /\/us\/en-us$/;
+      if (isHome.test(next)) {
+        getNavbar().addClass('th-navbar--translucent');
+      } else {
+        getNavbar().removeClass('th-navbar--translucent');
+      }
+    });
   })
   .factory('storage', require('./services/storage'))
   .factory('requireTranslations', require('./services/require-translations'))

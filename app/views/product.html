@@ -1,193 +1,174 @@
+<div class="th-page-wrap th-page-wrap--product">
 <div class="container">
-  <section class="product">
-    <header>
-      <hgroup>
-        <h1>Product</h1>
-        <h2>General Information</h2>
-      </hgroup>
-    </header>
-    <dl>
-      <dt>Id</dt>
-      <dd>{{product.id}}</dd>
-      <dt>Average Review</dt>
-      <dd>{{product.avgReview}}</dd>
-      <dt>Code</dt>
-      <dd>{{product.code}}</dd>
-      <dt>Is Gift Wrap Available</dt>
-      <dd>{{product.isGitfWrapAvailable}}</dd>
-      <dt>Main Image Url</dt>
-      <dd>{{product.mainImageUrl}}</dd>
-      <dt>Name</dt>
-      <dd>{{product.name}}</dd>
-      <dt>Product Url</dt>
-      <dd>{{product.productUrl}}</dd>
-      <dt>Taxable</dt>
-      <dd>{{product.taxable}}</dd>
-    </dl>
-  </section>
-  <section class="product-alt-images">
-    <header>
-      <h2>Alternative Images</h2>
-    </header>
-    <dl data-ng-repeat="altImage in product.altImages">
-      <dt>Id</dt>
-      <dd>{{altImage.id}}</dd>
-      <dt>Position</dt>
-      <dd>{{altImage.position}}</dd>
-      <dt>Type</dt>
-      <dd>{{altImage.type}}</dd>
-      <dt>Small</dt>
-      <dd>{{altImage.small}}</dd>
-      <dt>Medium</dt>
-      <dd>{{altImage.medium}}</dd>
-      <dt>Large</dt>
-      <dd>{{altImage.large}}</dd>
-    </dl>
-  </section>
-  <section class="product-availability">
-    <header>
-      <h2>Availability</h2>
-    </header>
-    <dl>
-      <dt>Stock</dt>
-      <dd>{{product.availability.stock}}</dd>
-      <dt>Allow Backorders</dt>
-      <dd>{{product.availability.allowBackorders}}</dd>
-      <dt>Description</dt>
-      <dd>{{product.availability.description}}</dd>
-    </dl>
-  </section>
-  <section class="product-categories">
-    <header>
-      <h2>Categories</h2>
-    </header>
-    <dl data-ng-repeat="category in product.categories">
-      <dt>Id</dt>
-      <dd>{{category.id}}</dd>
-      <dt>Name</dt>
-      <dd>{{category.name}}</dd>
-      <dt>Url</dt>
-      <dd>{{category.url}}</dd>
-      <dt><h3>Sub Categories</h3></dt>
-      <dl data-ng-repeat="subCategory in category.sub">
-        <dt>Id</dt>
-        <dd>{{subCategory.id}}</dd>
-        <dt>Name</dt>
-        <dd>{{subCategory.name}}</dd>
-        <dt>Url</dt>
-        <dd>{{subCategory.url}}</dd>
-      </dl>
-    </dl>
-  </section>
-  <section class="product-descriptions">
-    <header>
-      <h2>Descriptions</h2>
-    </header>
-    <dl>
-      <dt>Detail</dt>
-      <dd>{{product.descriptions.detail}}</dd>
-      <dt>Short</dt>
-      <dd>{{product.descriptions.short}}</dd>
-      <dt>Features</dt>
-      <dd>{{product.descriptions.features}}</dd>
-      <dt>Tech Specs</dt>
-      <dd>{{product.descriptions.techSpecs}}</dd>
-      <dt>Extended Info</dt>
-      <dd>{{product.descriptions.extendedInfo}}</dd>
-      <dt>Photo Caption Text</dt>
-      <dd>{{product.descriptions.photoCaptionText}}</dd>
-    </dl>
-  </section>
-  <section class="product-gift-wrap">
-    <header>
-      <h2>Gift Wrap</h2>
-    </header>
-    <dl>
-      <dt>Price</dt>
-      <dd>{{product.giftWrap.price}}</dd>
-    </dl>
-  </section>
-  <section class="product-options">
-    <header>
-      <h2>Options</h2>
-    </header>
-    <dl>
-      <dt>Id</dt>
-      <dd>{{product.options.id}}</dd>
-      <dt>Label</dt>
-      <dd>{{product.options.label}}</dd>
-    </dl>
-    <h3>Display Types</h3>
-    <dl data-ng-repeat="displayType in product.options.displayTypes">
-      <dt>Display Type</dt>
-      <dd>{{displayType}}</dd>
-    </dl>
-    <dl>
-      <dt>Can Select Multiple</dt>
-      <dd>{{product.options.canSelectMultiple}}</dd>
-    </dl>
-    <h3>Items</h3>
-    <dl data-ng-repeat="item in product.options.items">
-      <dt>Name</dt>
-      <dd>{{item.name}}</dd>
-      <dt>Value</dt>
-      <dd>{{item.value}}</dd>
-      <dt>Background Color</dt>
-      <dd>{{item.bgColor}}</dd>
-    </dl>
-  </section>
-  <section class="product-pricing">
-    <header>
-      <h2>Pricing</h2>
-    </header>
-    <dl>
-      <dt>Regular Price</dt>
-      <dd>{{product.pricing.regularPrice}}</dd>
-      <dt>Sale Price</dt>
-      <dd>{{product.pricing.salePrice}}</dd>
-      <dt>List Price</dt>
-      <dd>{{product.pricing.listPrice}}</dd>
-      <dt>Require Action For Sale Price</dt>
-      <dd>{{product.pricing.requireActionForSalePrice}}</dd>
-    </dl>
-    <h3>Recurring Price</h3>
-    <dl>
-      <dt>Price</dt>
-      <dd>{{product.pricing.recurringPrice.price}}</dd>
-      <dt>Start Price</dt>
-      <dd>{{product.pricing.recurringPrice.startPrice}}</dd>
-      <dt>Then X Months</dt>
-      <dd>{{product.pricing.recurringPrice.thenXMonths}}</dd>
-      <dt>Every X Months</dt>
-      <dd>{{product.pricing.recurringPrice.everyXMonths}}</dd>
-      <dt>Start X Months</dt>
-      <dd>{{product.pricing.recurringPrice.startXMonths}}</dd>
-    </dl>
-  </section>
-  <section class="product-seo">
-    <header>
-      <h2>SEO</h2>
-    </header>
-    <dl>
-      <dt>Photo Alt Text</dt>
-      <dd>{{product.seo.photoAltText}}</dd>
-      <dt>Meta Tag Title</dt>
-      <dd>{{product.seo.metaTagTitle}}</dd>
-      <dt>Meta Tag Description</dt>
-      <dd>{{product.seo.metaTagDescription}}</dd>
-      <dt>Meta Tag Keywords</dt>
-      <dd>{{product.seo.metaTagKeywords}}</dd>
-      <dt>Meta Tags Override</dt>
-      <dd>{{product.seo.metaTagOverride}}</dd>
-    </dl>
-  </section>
-  <section class="product-shipping">
-    <header>
-      <h2>Shipping</h2>
-    </header>
-    <dl>
-      <dt>Weight</dt>
-      <dd>{{product.shipping.weight}}</dd>
-    </dl>
-  </section>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="th-product-view th-product-view--tall">
+          <div class="row">
+            <div class="col-xs-12 col-md-9">
+              <div class="th-product-view__image">
+                <a href="#"><img src="/images/demo/product-lg.jpg" class="img-responsive" alt=""></a>
 </div>
+            </div>
+            <div class="visible-md visible-lg col-xs-12 col-md-3">
+              <div class="th-product-view__alts th-product-view--tall__alts">
+                <a href="#" class="th-product-view__alts__item">
+                  <img src="/images/demo/alt-view-1.jpg" alt="">
+                </a>
+                <a href="#" class="th-product-view__alts__item">
+                  <img src="/images/demo/alt-view-2.jpg" alt="">
+                </a>
+                <a href="#" class="th-product-view__alts__item">
+                  <img src="/images/demo/alt-view-3.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.th-product-view -->
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="th-product-details th-product-details--full">
+          <div class="visible-md visible-lg th-btn th-btn--back"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span> Back to Sweaters &amp; Cartigans</a></div>
+          <div class="th-product-details__name th-product-details--full__name">
+            Hooded Sweater
+          </div>
+          <div class="th-product-details__price th-product-details--full__price">
+            $34.95
+          </div>
+          <div class="th-product-details__options th-product-details--full__options">
+            <div class="th-product-details__swatches th-product-details--full__swatches">
+              <h5 class="h5">color</h5>
+              <a href="#"><img src="/images/demo/sw-1-lg.png" height="24" width="24" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2-lg.png" height="24" width="24" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3-lg.png" height="24" width="24" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4-lg.png" height="24" width="24" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5-lg.png" height="24" width="24" alt=""></a>
+            </div>
+            <div class="th-product-option th-product-option--inline">
+              <h5 class="h5">Size</h5>
+              <select name="size">
+                <option value="" selected>Select size</option>
+                <option value="SM">SM</option>
+                <option value="MD">MD</option>
+                <option value="LG">LG</option>
+              </select>
+            </div>
+
+            <div class="th-product-option th-product-option--inline">
+              <h5 class="h5">Qty</h5>
+              <select name="size">
+                <option value="" selected>1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="th-product-details--full__buttons">
+            <button class="btn btn-lg btn-primary th-btn th-btn--add-to-cart"><span class="th-icon th-icon--cart"></span> Add to Cart</button>
+          </div>
+
+          <div class="th-product-details--full__description">
+            <div class="th-product-details--full__description__item">
+              <h5 class="h5">Description</h5>
+              <p>Knit sweater in melange cotton with lined drawstring hood, short button placket, and side pockets.</p>
+            </div>
+            <div class="th-product-details--full__description__item">
+              <h5 class="h5">Details</h5>
+              <p>100% cotton. Machine wash warm. imported. Article No. 66-3334</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class="th-products-grid">
+          <h4 class="h4 th-products-grid__heading">Style With</h4>
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-1.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-2.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-3.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-4.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="th-products-grid">
+          <h4 class="h4 th-products-grid__heading">Similar</h4>
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-1.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-2.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-3.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+              <div class="th-products-grid__item">
+                <div class="th-products-grid__item__image">
+                  <a href="#"><img src="/images/demo/product-xs-4.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="th-products-grid__item__name"><a href="#">Cardigan</a></div>
+                <div class="th-products-grid__item__price">$24.95</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div><!-- /.th-product-page-wrap -->

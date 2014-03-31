@@ -61,4 +61,28 @@
   }
 }
 
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin font-smoothing($value: antialiased) {
+  -webkit-font-smoothing: $value;
+}
+
+// example: @include translucent-bg(@includeSmoke, 0.7);
+@mixin translucent-bg($color, $opacity) {
+    background-color: $color;
+    background-color: transparentize($color, 1 - $opacity);
+}
+
+// @mixin icon($folder, $name) {
+//   @include #{$folder}-sprite($name);
+//   width: #{$folder}-sprite-width($name);
+//   height: #{$folder}-sprite-height($name);
+// }
+
 

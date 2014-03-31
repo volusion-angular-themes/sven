@@ -1,1 +1,31 @@
 @import "bootstrap/buttons";
+
+.th-btn {
+
+  span, a {
+    @extend %inline-block;
+    top: 0;
+  }
+
+  &--add-to-cart {
+    span {
+      margin-right: 8px;
+    }
+  }
+
+  &--view-more {
+    display: block;
+    background-color: map-get($colors, lightBg);
+    border: 0;
+    color: map-get($colors, textLight);
+    margin: 15px auto;
+  }
+
+  &--back {
+    background: transparent;
+    border: 0;
+    color: map-get($colors, textColor);
+    font-size: 1.4rem;
+    padding: 15px 0;
+  }
+}

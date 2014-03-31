@@ -1,0 +1,28 @@
+@import "sprites/icons/*.png";
+
+@mixin sprite--icons($name) {
+  @include icons-sprite($name);
+  height: icons-sprite-height($name);
+  width: icons-sprite-width($name);
+}
+
+.th-icon {
+
+  &--icon {
+    @include sprite--icons(cart);
+  }
+
+  &--search {
+    @include sprite--icons(search);
+  }
+
+  &--search--light {
+    @include sprite--icons(search--light);
+  }
+
+  &--elist {
+    @include sprite--icons(arrow)
+  }
+
+}
+

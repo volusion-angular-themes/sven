@@ -1,45 +1,278 @@
-<div class="container">
-  <section class="category">
-    <h1>Category</h1>
-    <dl>
-      <dt>Id</dt>
-      <dd>{{category.id}}</dd>
-      <dt>Name</dt>
-      <dd>{{category.name}}</dd>
-    </dl>
-  </section>
-  <section class="category-subcategories">
-    <h2>Sub-Categories</h2>
-    <dl data-ng-repeat="subCategory in category.subCategories">
-      <dt>Id</dt>
-      <dd>{{subCategory.id}}</dd>
-      <dt>Name</dt>
-      <dd>{{subCategory.name}}</dd>
-    </dl>
-  </section>
-  <section class="category-products">
-    <h2>Products</h2>
-    <dl data-ng-repeat="product in category.products">
-      <dt>Id</dt>
-      <dd>{{product.id}}</dd>
-      <dt>Name</dt>
-      <dd>{{product.name}}</dd>
-      <dt>Url</dt>
-      <dd>{{product.url}}</dd>
-      <dt>Main Image Url</dt>
-      <dd>{{product.mainImageUrl}}</dd>
-      <dt>Code</dt>
-      <dd>{{product.code}}</dd>
-      <dt>Is On Sale</dt>
-      <dd>{{product.isOnSale}}</dd>
-      <dt>Is New</dt>
-      <dd>{{product.isNew}}</dd>
-      <dt>Regular Price</dt>
-      <dd>{{product.pricing.regularPrice}}</dd>
-      <dt>Sale Price</dt>
-      <dd>{{product.pricing.salePrice}}</dd>
-      <dt>List Price</dt>
-      <dd>{{product.pricing.listPrice}}</dd>
-    </dl>
-  </section>
+<div class="th-page-wrap th-page-wrap--padded th-page-wrap--category">
+  <div class="container">
+
+    <div class="page-header th-page-header">
+      <h1>Sweaters &amp; Cardigans</h1>
+    </div>
+
+    <div class="visible-md visible-lg">
+      <div class="th-breadcrumbs">
+        <ol class="breadcrumb th-breadcrumbs__list">
+          <li class="th-breadcrumbs__item"><a href="#">Sven </a></li>
+          <li class="active th-breadcrumbs__item">Sweaters &amp; Gardigans</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="visible-lg col-md-8">
+        <div class="th-product-box th-product-box th-product-box--large">
+          <a href="#" class="th-product-box__image th-product-box--large__image">
+            <img src="/images/demo/product-lg-featured.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple th-product-details--large">
+            <a href="#" class="th-product-details__name th-product-details--large__name">Hooded Sweater</a>
+            <span class="th-product-details--large__description">
+              Knit sweater in melange cotton with lined drawstring hood, short button placket, and side pockets.
+            </span>
+            <span class="th-product-details__price th-product-details--large__price">$34.95</span>
+            <span class="th-product-details__swatches th-product-details--large__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden-lg col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-1.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-2.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-3.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-4.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-5.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-1.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-2.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-3.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-4.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-5.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-1.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="th-product-box">
+          <a href="#" class="th-product-box__image">
+            <img src="/images/demo/product-sm-2.jpg" alt="">
+          </a>
+          <div class="th-product-details th-product-details--simple">
+            <a href="#" class="th-product-details__name">Hooded Sweater</a>
+            <span class="th-product-details__price">$34.95</span>
+            <span class="th-product-details__swatches">
+              <a href="#"><img src="/images/demo/sw-1.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-2.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-3.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-4.png" height="10" width="11" alt=""></a>
+              <a href="#"><img src="/images/demo/sw-5.png" height="10" width="11" alt=""></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- .row -->
+
+    <div class="visible-xs visible-sm">
+      <div class="row">
+        <button type="button" class="btn btn-lg th-btn th-btn--view-more">View More</button>
+      </div>
+    </div>
+
+  </div>
 </div>

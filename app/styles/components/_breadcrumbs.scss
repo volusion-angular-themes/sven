@@ -1,1 +1,6 @@
 @import "bootstrap/breadcrumbs";
+
+.th-breadcrumbs__list {
+  padding-left: 0;
+  border-bottom: 2px solid map-get($colors, textColor);
+}
