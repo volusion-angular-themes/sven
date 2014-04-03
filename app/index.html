@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" data-ng-app="volusionApp"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" data-ng-app="volusionApp"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" data-ng-app="volusionApp"> <![endif]-->
@@ -15,198 +15,50 @@
     <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild -->
   </head>
-  <body role="document">
+  <body role="document" data-ng-controller="IndexCtrl">
     <!--[if lt IE 7]>
       <p class="browse-happy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top th-navbar" role="navigation">
-      <div class="th-navbar__top">
-        <div class="container">
-          <div class="pull-left navbar-header">
-            <button type="button" class="navbar-toggle th-navbar__toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only" data-translate="index.toggleNav"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand th-navbar__brand th-navbar__brand--desktop" data-ui-sref="i18n.home">
-              <img src="/images/theme/logo.png">
-            </a>
-            <a class="navbar-brand th-navbar__brand th-navbar__brand--mobile" data-ui-sref="i18n.home">
-              <img src="/images/theme/logo-mobile.png">
-            </a>
-          </div>
-          <div class="pull-left visible-md visible-lg">
-            <div class="th-search">
-              <form class="th-search__form" role="form">
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn th-search__submit"><span class="th-icon th-icon--search"></span></button>
-                  </div>
-                  <label class="sr-only" for="site-search">Search our store</label>
-                  <input type="text" class="form-control th-search__input" id="site-search" placeholder="Search our store">
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="pull-right visible-xs visible-sm">
-            <div class="th-search--collapsed">
-              <form class="th-search--collapsed__form" role="form">
-                <label class="sr-only" for="site-search">Search our store</label>
-                <input type="text" class="th-search--collapsed__input" id="site-search" placeholder="Search our store">
-                <button type="submit" class="th-search--collapsed__submit"><span class="th-icon th-icon--search--light"></span></button>
-              </form>
-            </div>
-          </div>
-
-          <div class="pull-right">
-            <div class="th-cart-summary">
-              <a href="#" class="th-cart-summary__link">
-                <span class="th-icon th-icon--cart th-cart-summary__icon"></span>
-                <span class="th-cart-summary__count">2</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="pull-right visible-md visible-lg">
-            <nav class="nav nav-pills th-account-menu">
-              <a href="#" class="th-account-menu__link">Account</a>
-              <a href="#" class="th-account-menu__link">Wish List</a>
-            </nav>
-          </div>
-
-          <div class="pull-right visible-md visible-lg">
-            <div class="th-contact-info">
-              <span class="th-contact-info__item">1-800-289-7836</span>
-            </div>
-          </div>
-
-        </div> <!-- .container -->
-      </div> <!-- .th-navbar__top -->
-
-      <div class="th-navbar__bottom">
-        <div class="navbar-collapse collapse th-menu-top">
-          <div class="container">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="/" data-translate="index.home"></a></li>
-              <li><a href="#about" data-translate="index.about"></a></li>
-              <li><a href="#contact" data-translate="index.contact"></a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-translate="index.dropdown"></span> <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#" data-translate="index.action"></a></li>
-                  <li><a href="#" data-translate="index.anotherAction"></a></li>
-                  <li><a href="#" data-translate="index.somethingElseHere"></a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header" data-translate="index.navHeader"></li>
-                  <li><a href="#" data-translate="index.separatedLink"></a></li>
-                  <li><a href="#" data-translate="index.oneMoreSeparatedLink"></a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div> <!--/.nav-collapse -->
-      </div><!-- .th-navbar__bottom -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-ng-init="navCollapsed = true" data-ng-click="navCollapsed = !navCollapsed">
+            <span class="sr-only" data-translate="index.toggleNav"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" data-translate="index.bootstrapTheme">Bootstrap theme</a>
+        </div>
+        <div class="navbar-collapse collapse" data-ng-class="!navCollapsed && 'in'" data-ng-click="navCollapsed=true">
+          <ul class="nav navbar-nav">
+            <li data-ui-sref-active="active">
+              <a data-ui-sref="i18n.home" data-translate="index.home">Home</a>
+            </li>
+            <li data-ui-sref-active="active">
+              <a data-ui-sref="i18n.style-guide" data-translate="index.styleGuide">Style Guide</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-translate="index.dropdown"></span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-translate="index.action"></a></li>
+                <li><a href="#" data-translate="index.anotherAction"></a></li>
+                <li><a href="#" data-translate="index.somethingElseHere"></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header" data-translate="index.navHeader"></li>
+                <li><a href="#" data-translate="index.separatedLink"></a></li>
+                <li><a href="#" data-translate="index.oneMoreSeparatedLink"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
 
-
     <!-- Add your site or application content here -->
-    <div class="theme-showcase" role="main" data-ui-view=""></div>
-
-    <footer class="th-footer">
-      <div class="container">
-        <div class="clearfix th-footer__top">
-          <ul>
-            <li><a href="#">Free shipping on orders over $150</a></li>
-            <li><a href="#">Free returns</a></li>
-            <li><a href="#">Satisfaction guaranteed</a></li>
-          </ul>
-        </div>
-        <div class="clearfix th-footer__middle">
-          <div class="row">
-            <div class="col-sm-6 col-md-4">
-              <div class="visible-xs">
-                <div class="th-footer__link--collapsed">
-                  <div class="th-footer__title">Resources</div>
-                </div>
-              </div>
-              <div class="hidden-xs">
-                <div class="th-footer__links">
-                  <div class="th-footer__title">Resources</div>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Payment</a></li>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Returns</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-sm-6">
-                      <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Legal</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div><!-- .fth-footer__links -->
-                <div class="visible-sm">
-                  <div class="th-footer__copyright">
-                    &copy; 2014 Sven. All rights reserved.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="th-elist">
-                <div class="th-footer__title th-elist__title">Newsletter</div>
-                <form class="th-elist__form" role="form">
-                  <div class="input-group">
-                    <label class="sr-only" for="elist">Subscribe to our newsletter</label>
-                    <input type="text" class="form-control th-elist__input" id="elist" placeholder="Your Email Address...">
-                    <div class="input-group-btn">
-                      <button type="submit" class="th-elist__submit"><span class="th-icon th-icon--arrow"></span></button>
-                    </div>
-                  </div>
-                </form>
-              </div><!-- .elist -->
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="th-footer__social">
-                <div class="th-footer__title th-footer__social__title">Connect with us</div>
-                <div class="th-social-icons">
-                  <a href="#" class="th-icon th-icon--twitter th-social-icons__icon">
-                    <div class="th-icon__foreground"></div>
-                  </a>
-                  <a href="#" class="th-icon th-icon--facebook th-social-icons__icon">
-                    <div class="th-icon__foreground"></div>
-                  </a>
-                  <a href="#" class="th-icon th-icon--google th-social-icons__icon">
-                    <div class="th-icon__foreground"></div>
-                  </a>
-                  <a href="#" class="th-icon th-icon--pinterest th-social-icons__icon">
-                    <div class="th-icon__foreground"></div>
-                  </a>
-                  <a href="#" class="th-icon th-icon--instagram th-social-icons__icon">
-                    <div class="th-icon__foreground"></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- .footer__middle -->
-        <div class="th-footer__bottom">
-          <div class="hidden-sm">
-            <div class="th-footer__copyright">
-              &copy; 2014 Sven. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </div><!-- .container" -->
-    </footer>
+    <div class="theme-showcase" role="main" data-ui-view="" autoscroll="false"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -243,12 +95,6 @@
     <script src="/bower_components/json3/lib/json3.min.js"></script>
     <!-- endbower -->
     <script src="/bower_components/angular-i18n/angular-locale_en-us.js"></script>
-    <script src="/bower_components/angular-ui-bootstrap/src/tabs/tabs.js"></script>
-    <script src="/bower_components/angular-ui-bootstrap/src/carousel/carousel.js"></script>
-    <script src="/bower_components/angular-ui-bootstrap/src/accordion/accordion.js"></script>
-    <script src="/bower_components/angular-ui-bootstrap/src/dropdownToggle/dropdownToggle.js"></script>
-    <script src="/bower_components/angular-ui-bootstrap/src/transition/transition.js"></script>
-    <script src="/bower_components/angular-ui-bootstrap/src/collapse/collapse.js"></script>
     <!-- endbuild -->
 
     <script src="/scripts/scripts.js"></script>

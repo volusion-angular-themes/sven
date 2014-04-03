@@ -35,6 +35,8 @@ angular.module('volusionApp')
       route('/categories/:id');
     apiProvider.endpoint('config').
       route('/config');
+    apiProvider.endpoint('cart').
+      route('/cart');
 
 
     $locationProvider.html5Mode(true);
@@ -55,7 +57,12 @@ angular.module('volusionApp')
     $stateProvider
       .state('i18n', {
         url: '/:region/:lang-:country',
-        templateUrl: 'views/i18n.html'
+        templateUrl: 'views/i18n.html',
+        resolve: {
+          translations: ['translate', function(translate) {
+            return translate.addParts('index');
+          }]
+        }
       })
       .state('i18n.home', {
         url: '/',
@@ -104,8 +111,8 @@ angular.module('volusionApp')
         }
       });
   })
-  .run(function(translate, $templateCache, $rootScope) {
-    translate.addParts('index');
+  .run(function($templateCache, $rootScope) {
+    $templateCache.put('views/i18n.html', require('./views/i18n.html'));
     $templateCache.put('views/home.html', require('./views/home.html'));
     $templateCache.put('views/style-guide.html', require('./views/style-guide.html'));
     $templateCache.put('views/category.html', require('./views/category.html'));
