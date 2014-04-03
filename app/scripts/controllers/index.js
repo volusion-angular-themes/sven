@@ -7,6 +7,11 @@ module.exports = [
 
   function ($scope, $http, api) {
 
+    $scope.$on('$stateChangeSuccess', function(event, toState) {
+      var $navbar = angular.element(document.getElementsByClassName('th-navbar')[0]);
+      $navbar.toggleClass('th-navbar--translucent', toState.name === 'i18n.home');
+    });
+
     $scope.global = {
       cart: {
         itemCount: 10
