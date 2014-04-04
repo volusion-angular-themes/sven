@@ -1,11 +1,19 @@
 'use strict';
 
 module.exports = [
+  '$state',
   '$scope',
   '$http',
   'api',
 
-  function ($scope, $http, api) {
+  function ($state, $scope, $http, api) {
+
+    $scope.$on('$stateChangeSuccess', function(event, toState) {
+      if (toState.name === 'i18n') {
+        $state.go('.home', null, { location: 'replace' });
+      }
+    });
+
 
     $scope.$on('$stateChangeSuccess', function(event, toState) {
       var $navbar = angular.element(document.getElementsByClassName('th-navbar')[0]);
@@ -45,6 +53,5 @@ module.exports = [
         console.log('Error: ', error);
       });
 
-    $scope.htmlReady();
   }
 ];
